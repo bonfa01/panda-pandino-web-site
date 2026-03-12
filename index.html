@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>panda pandino</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+
+<script>
+
+    const targetDate = new Date("2026-06-19T09:00:00").getTime();
+
+    setInterval(function () {
+
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerText = days;
+        document.getElementById("hours").innerText = hours;
+        document.getElementById("minutes").innerText = minutes;
+        document.getElementById("seconds").innerText = seconds;
+
+    }, 1000);
+
+</script>
+
+
+
+<body>
+
+    <!--NAVBAR-->
+    <header class="navbar">
+        <nav class="nav-container">
+            <div class="nav-logo">
+                <img src="logo.png" alt="Logo Panda">
+            </div>
+
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Evento</a>
+                <a href="#">Programma</a>
+                <a href="#">Iscrizione</a>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-bg">
+            <div class="hero-img">
+                <img src="bg-evento.jpg" alt="Panda a Pandino Hero">
+
+                <div class="overlay-green"></div>
+                <div class="overlay-gradient"></div>
+            </div>
+        </div>
+
+        <div class="hero-content">
+
+            <div class="badge">
+                <span class="dot"></span>
+                Edizione 2026
+            </div>
+
+            <h1>
+                IL PIÙ GRANDE <br>
+                <span>RADUNO</span> <br>
+                DI PANDA AL MONDO!
+            </h1>
+
+            <p>
+                Migliaia di appassionati, una sola leggenda. <br>
+                Unisciti alla famiglia dei Pandisti a Pandino.
+            </p>
+            <!--COUNTDOWN-->
+            <div class="countdown">
+
+                <div class="time-box">
+                    <span id="days">0</span>
+                    <p>GIORNI</p>
+                </div>
+
+                <div class="time-box">
+                    <span id="hours">0</span>
+                    <p>ORE</p>
+                </div>
+
+                <div class="time-box">
+                    <span id="minutes">0</span>
+                    <p>MINUTI</p>
+                </div>
+
+                <div class="time-box">
+                    <span id="seconds">0</span>
+                    <p>SECONDI</p>
+                </div>
+
+            </div>
+
+            <!--BOTTONI HERO-->
+            <div class="hero-buttons">
+
+                <a href="#iscrizione" class="btn-primary">
+                    Iscriviti Ora
+                    <svg width="22" height="22" viewBox="0 0 24 24">
+                        <path d="M9 6l6 6-6 6" />
+                    </svg>
+                </a>
+
+                <a href="#missione" class="btn-secondary">
+                    Scopri la Missione
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--SEZIONE MEDAGLIA-->
+
+    <section class="cta-medal">
+        <div class="cta-container">
+
+            <div class="cta-content">
+                <div class="medal-img">
+                    <img src="medaglia.png" alt="Medaglia Commemorativa 2025">
+                </div>
+
+                <div class="cta-text">
+                    <h2>Medaglia Commemorativa 2025</h2>
+                    <p>Un pezzo di storia nel tuo garage</p>
+                </div>
+            </div>
+
+            <a href="#" class="btn-buy">
+                Acquista Ora
+            </a>
+        </div>
+
+        <div class="bg-decoration">
+            <i data-lucide="car"></i>
+        </div>
+    </section>
+
+    <!--SEZIONE MISSION-->
+    <section id="missione" class="missione">
+
+        <div class="missione-container">
+
+            <div class="missione-img">
+
+                <div class="img-wrapper">
+
+                    <img src="crew.jpg" alt="Missione Panda">
+
+                    <div class="missione-icon">
+
+                        <svg viewBox="0 0 24 24" width="50" height="50">
+                            <circle cx="12" cy="12" r="10" stroke="#8a5a3b" stroke-width="2" fill="none" />
+                            <circle cx="12" cy="12" r="6" stroke="#8a5a3b" stroke-width="2" fill="none" />
+                            <circle cx="12" cy="12" r="2" fill="#8a5a3b" />
+                        </svg>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="missione-text">
+
+                <span class="missione-label">MISSIONE</span>
+
+                <h2>
+                    CELEBRARE UN <span>MITO</span> ITALIANO.
+                </h2>
+
+
+                <div class="missione-item">
+
+                    <h5>
+                        <span class="number">01</span>
+                        Qual è la priorità?
+                    </h5>
+
+                    <p>
+                        Sin dalla prima edizione, la strada intrapresa è quella di dare vita ad un vero e proprio
+                        evento, non un semplice raduno. Le Panda sono le vere protagoniste in un contesto di
+                        celebrazione di un mito.
+                    </p>
+
+                </div>
+
+
+                <div class="missione-item">
+
+                    <h5>
+                        <span class="number">02</span>
+                        Cosa ci unisce?
+                    </h5>
+
+                    <p>
+                        I nostri Pandisti hanno in comune la simpatia, l'entusiasmo e la passione per questo simbolo
+                        italiano. Siamo una grande famiglia che condivide momenti indimenticabili.
+                    </p>
+
+                </div>
+
+
+                <div class="missione-item">
+
+                    <h5>
+                        <span class="number">03</span>
+                        Il nostro domani
+                    </h5>
+
+                    <p>
+                        L'obiettivo è quello di crescere e portare sempre più persone e macchine all'interno di questo
+                        evento, implementando spettacoli e intrattenimento.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!--ETICA-->
+
+    <section id="etica" class="etica">
+
+        <div class="etica-container">
+
+            <div class="etica-icon">
+
+                <svg viewBox="0 0 24 24" width="70" height="70">
+                    <path fill="#8a5a3b"
+                        d="M12 21s-7-4.35-9-8.5C1.5 9.42 3.42 6 7 6c2.04 0 3.24 1.2 5 3 1.76-1.8 2.96-3 5-3 3.58 0 5.5 3.42 4 6.5C19 16.65 12 21 12 21z" />
+                </svg>
+
+            </div>
+
+            <h2>
+                ETICA E SOLIDARIETÀ
+            </h2>
+
+            <div class="divider"></div>
+
+            <p>
+                "Sin dal primo giorno, il fine unico di Panda a Pandino è di carattere benefico.
+                Non si è mai pensato ad una destinazione diversa dei fondi raccolti se non quella
+                di contribuire con le realtà benefiche del territorio o nazionali."
+            </p>
+
+        </div>
+
+    </section>
+
+    <!--ARCHIVIO-->
+    <section id="archivio" class="archivio">
+
+        <div class="archivio-header">
+
+            <h2>PASSIONE & ENTUSIASMO</h2>
+
+            <p>
+                Rivivi le emozioni delle scorse edizioni attraverso i nostri scatti più belli.
+            </p>
+
+        </div>
+
+
+        <div class="archivio-grid">
+
+            <div class="archivio-item"></div>
+            <div class="archivio-item"></div>
+            <div class="archivio-item"></div>
+            <div class="archivio-item"></div>
+            <div class="archivio-item"></div>
+            
+            <div class="archivio-item"></div>
+            <div class="archivio-item"></div>
+            <div class="archivio-item"></div>
+            <div class="archivio-item"></div>
+            <div class="archivio-item"></div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
